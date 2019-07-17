@@ -63,3 +63,9 @@ function logNumber(){
 }
 
 logNumber();
+
+//'use strict'
+//enforce stricter parsing and error handling in your code
+//1.prevents the use of global variables
+//2.all peremeters in the function must be unique
+//3.fail fast and fail loudly

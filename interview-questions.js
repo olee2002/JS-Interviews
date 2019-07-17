@@ -14,6 +14,21 @@ function tripleAdd1(num1, num2, num3){
 
 tripleAdd(10)(20)(30)
 
+// function getTravelTime(distance, speed){
+//    return distance/speed;
+// }
+
+function getTravelTime(distance){
+   return function(speed){
+      return distance / speed;
+   }
+}
+
+const travelTimeBosNyc = getTravelTime(400)
+//this way we can set the distance always the same and call different speed asn needed without resetting the same distance as a peremter.
+console.log(travelTimeBosNyc(60))
+
+
 //IIFE (Imediate Invoked Function Expression)
 //preserve any private scope in a function
 //avoid overriding any global/outside scope variables
@@ -69,3 +84,4 @@ logNumber();
 //1.prevents the use of global variables
 //2.all peremeters in the function must be unique
 //3.fail fast and fail loudly
+

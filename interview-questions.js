@@ -51,3 +51,15 @@ function closure(a){
 //boolean vs non-boolean => non-boolean converted to boolean
 //obj vs primitive data-type => obj is converted to primitive
 
+
+//Log Number function
+//variables always look at its scope first to see if the variable exists if not, it will go to the above scope. so the code below will return as undefined.
+
+var num = 50;
+
+function logNumber(){
+   console.log(num);
+   var num = 100;
+}
+
+logNumber();

@@ -37,6 +37,13 @@ console.log(travelTimeBosNyc(60))
    console.log("Hello World!")
 })()
 
+(function(){
+   var x = y = 200;
+ })();
+ 
+ console.log('y', y)//y 200 (global scope)
+ console.log('x', x)// x is not defined (IIFE scope)
+
 //closure
 //a closure in an inner function that has access to the scope of an enclosing function
 //variables inner/outter/ global
@@ -46,6 +53,26 @@ function closure(a){
     return a
    }
 }
+
+
+//closure example
+function my(){
+   let i=0;
+ 
+   return function (){
+   i++
+   return i
+   }
+ }
+ const one = my()//making an instance
+ const two = my()//making an instance
+ 
+ console.log(one())//1
+ console.log(one())//2
+ console.log(one())//3
+ console.log(two())//1
+ console.log(two())//2
+ console.log(one())//4
 
 //this key word
 //in object, this key word refers to its own object itself.
@@ -85,3 +112,24 @@ logNumber();
 //2.all peremeters in the function must be unique
 //3.fail fast and fail loudly
 
+//call & apply methods
+
+//call() - any function that defined in JS can use call method.
+
+
+const car1={
+   brand:'Porsche',
+   getCarDescription:function(cost, year, color){
+     console.log(`This car is a ${this.brand}. The price is ${cost}. The year is ${year}. The color is ${color}.\n`)
+   }
+ }
+ 
+ const car2={
+   brand:'Lamborghini'
+ }
+ 
+ car1.getCarDescription(100, 2010, 'yello')
+ //call the function that is another obj
+ car1.getCarDescription.call(car2, 200,2010,'blue')
+ //apply
+ car1.getCarDescription.apply(car2, [200,2010,'blue'])

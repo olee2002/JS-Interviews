@@ -200,3 +200,99 @@ console.log(typeof null);
 console.log(typeof undefined);
 console.log(typeof {});
 console.log(typeof []);
+
+//Array validation method
+//Arr.isArray({})
+//{} instanceof Array
+
+//2 obj with same values are not the same because objects created in different memory location.
+//JSON.stringify(obj1)===JSON.stringify(obj2)
+
+const user1 = {
+   name: 'Jordan',
+   age: 28,
+ };
+  
+ const user2 = {
+   name: 'Jordan',
+   age: 28,
+ };
+  
+ console.log(user1 == user2);
+ console.log(JSON.stringify(user1) === JSON.stringify(user2));
+
+ //arrays
+
+ var arr1 = [];
+var arr2 = new Array(50);//creating 50 empty elements
+var arr3 = new Array(1, 2, "three", 4, "five");
+var arr4 = new Array([1, 2, 3, 4, 5]);
+ 
+console.log('arr1: ', arr1);
+console.log('arr2: ', arr2);
+console.log('arr3: ', arr3);
+console.log('arr4: ', arr4);
+
+
+const data1 = 'Jordan Smith';
+ 
+const data2 = [].filter.call(data1, function(elem, index) {
+  return index > 6;
+});
+ 
+console.log(data2);//[ 'S', 'm', 'i', 't', 'h' ]
+
+let num =50
+num.toFixed(2)
+num.toPrecision(12)
+
+//String and Arrays = solution 
+const data1 = 'Jordan Smith';
+ 
+const data2 = [].filter.call(data1, function(elem, index) {
+  return index > 6;
+});
+ 
+// only use 'read-only' methods: filter, forEach, map, some, every, etc.
+// cannot use: push, pop, splice, shift, reverse, etc.
+ 
+console.log(data2);
+
+//object properties
+
+const a = {};
+const b = { name: 'b' };
+const c = { name: 'c' };
+ 
+a[b] = 200;
+a[c] = 400;
+ 
+console.log(a[b]);
+
+const a = {};
+const b = { name: 'b' };
+const c = { name: 'c' };
+ 
+a[b] = 200;
+// a['[object Object]'] = 200
+ 
+a[c] = 400;
+// a['[object Object]'] = 400
+ 
+console.log(a[b]);
+// console.log(a['[object Object]']);
+
+
+//
+var x = 10;
+ 
+function y() {
+    function x() {}
+    x = 100;
+    return;
+    // function x() {}
+}
+ 
+y();
+ 
+console.log(x);

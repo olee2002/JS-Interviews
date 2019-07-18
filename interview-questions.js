@@ -133,3 +133,70 @@ const car1={
  car1.getCarDescription.call(car2, 200,2010,'blue')
  //apply
  car1.getCarDescription.apply(car2, [200,2010,'blue'])
+
+
+ //passing by reference 
+ //copying array.. slice() .concat([]) [...arr]
+ 
+ //arguments keyword
+ //var args = Array.prototype.slice.call(arguments)
+
+ function argument() {
+   console.log(arguments[0])
+   //var args = Array.prototype.slice.call(arguments)
+    }
+  argument(3, 7, 2)//{0:3, 1:7, 2:2}
+
+
+//JSON
+// TASK:
+// 1. Describe what JSON format is.
+// 2. Delete the data types not permitted in JSON.
+// 3. Replace placeholder-text with the corresponding data type,
+// properly formatted as JSON - js object notation.
+// undefined or functions are not allowed
+ 
+const myJsonObj = {
+   "myString": "hello world",
+   "myNumber": 12345.6789,
+   "myNull": null,
+   "myBoolean": true,
+   "myArray": [20, 30, "orange"],
+   "myObject": {
+     "name": "Sam",
+     "age": 30
+   }
+ };
+
+ //settimeout  sent to eventloop
+
+ //create obj
+ //1. object literal / 2. new keyword & object constructor
+ //3. constructor function
+ //() 'invoked'
+
+ function Car(color, brand, year){
+    this.color = color;
+    this.brand = brand;
+    this.year = year;
+ }
+
+ Car.prototype.getColor = function(){
+    return this.color;
+ }
+ const carlysCar = new Car('blue', 'ferarri', 2015);
+ console.log(carlysCar)
+
+ function User(first, last, age, gender){
+   this.first = first;
+   this.last = last;
+   this.age = age;
+   this.gender = gender;
+ }
+// new keyword is creating an empty obj and pushing the perimeter information to it.
+ const mary = new User('mary', 'smith', 26, 'male')
+
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof {});
+console.log(typeof []);

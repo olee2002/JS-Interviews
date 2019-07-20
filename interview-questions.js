@@ -1,3 +1,35 @@
+// FRONTEND DEVELOPER POTENTIAL INTERVIEW QUESTIONS
+
+// Promise (vs Observable) is an object that may produce a value some time in the future. It has 3 states fulfilled, pending, rejected. Async & Await ( Syntactic Sugar ES 6 ). 
+
+// A callback is a function that is to be executed after another function has finished executing - hence the name ‘call back’ 
+
+// IIFE(Immediately Invoked Function Expression) - preserve any private scope in a function/ avoid overriding any global/outside scope variables
+// (function(){console.log("Hello World!")})()
+// A curried function is a function that takes multiple arguments one at a time.
+// function tripleAdd(num1){return function(num2){return function(num3){return num1+num2+num3}}}
+// tripleAdd(num1)(num2)(num3)
+// Variables - Const(block scope, can’t reassign value) | Let(block scope) | Var (Function/ Global scope)
+
+// Closure is an inner function that has access to the scope of enclosing variables inner/outer/global
+// Lexical scoping: Variables declared outside of a function are global variables and are visible everywhere in a JavaScript program. Variables declared inside a function have function scope and are visible only to code that appears inside that function.
+
+// OOP  (4 concepts - EPAI- Encapsulation, Poly-morphism, Abstraction, Inheritance)
+// THIS (this) keyword refers to its own object itself. Whatever obj it is directly inside of.
+
+// A RESTful API is an application programming interface that uses HTTP requests to GET, PUT, POST and DELETE data. Also referred to as a RESTful web service -- is based on representational state transfer ( REST ) technology, an architectural style and approach to communications often used in web services development.
+
+// HTTP (HyperText Transfer Protocol)
+// Client/Server (request/response) - customer/server at a restaurant
+// Stateless protocol not related to any other. Every transaction is unique (flipping a coin - session & cookies to handle states)
+// Application Layer (HTTP uses TCP that determines how the data is formatted)
+// Client Actions (Get|Post|Delete|Put Etc)
+// Server Status Codes
+// Headers (tiny bits - tweak the operation of Request - content type :JSON or XML, TXT
+
+
+
+
 //A curried function is a function that takes multiple arguments one at a time. 
 
 function tripleAdd(num1){
